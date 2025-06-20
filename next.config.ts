@@ -18,4 +18,19 @@ const nextConfig: NextConfig = {
   },
 };
 
+module.exports = {
+  // Internationalization settings for locale subpaths
+  i18n: {
+    locales: ['en', 'fr', 'es'],  // list all supported locales
+    defaultLocale: 'en',          // fallback locale
+  },
+  // Use standalone output to reduce container size
+  output: 'standalone',
+  // Image domains if serving media from Strapi or other CDN
+  images: {
+    domains: ['media.yoursite.com', 'res.cloudinary.com', 'randomuser.me', 'localhost'],
+  },
+  // Other options (e.g. redirects, rewrites, headers) as needed
+};
+
 export default nextConfig;
